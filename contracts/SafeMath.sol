@@ -1,5 +1,4 @@
 pragma solidity ^0.4.15;
-// https://github.com/brynbellomy/consensys-academy-prediction-market/blob/master/contracts/SafeMath.sol
 
 library SafeMath {
     function safeMul(uint self, uint b) internal returns (uint) {

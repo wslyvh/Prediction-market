@@ -5,7 +5,7 @@ var PredictionMarket = artifacts.require("./PredictionMarket.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(Owned);
-  deployer.link(Owned, Terminable, PredictionMarket);
+  deployer.link(Owned, [Terminable, PredictionMarket]);
   deployer.deploy(Terminable);
   deployer.link(Terminable, PredictionMarket);
   deployer.deploy(SafeMath);
