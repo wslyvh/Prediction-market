@@ -131,7 +131,7 @@ contract PredictionMarket is Terminable {
         require(questions[_questionId].index == _questionId);
         require(questions[_questionId].deadline > block.timestamp);
         require(questions[_questionId].hasOutcome == true);
-        require(!questions[_questionId].bets[msg.sender].isClaimed == false);
+        require(questions[_questionId].bets[msg.sender].isClaimed == false);
         require(questions[_questionId].outcome == questions[_questionId].bets[msg.sender].prediction);
         
         uint winners = 0;
